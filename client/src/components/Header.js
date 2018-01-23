@@ -11,14 +11,22 @@ class Header extends Component {
         return;
       case false:
         return [
-            <SideNavItem key="1" href="/auth/google">Sign Up</SideNavItem>,
-            <SideNavItem key="2" href="/auth/google">Login With Google</SideNavItem>        
+          <SideNavItem key="1" href="/auth/google">
+            Sign Up
+          </SideNavItem>,
+          <SideNavItem key="2" href="/auth/google">
+            Login With Google
+          </SideNavItem>
         ];
       default:
         return [
-            <SideNavItem key="1"><Payments /></SideNavItem>,
-            <SideNavItem key="2">Credits: {this.props.auth.credits}</SideNavItem>,
-            <SideNavItem key="3" href="/api/logout">Logout</SideNavItem>
+          <SideNavItem key="1">
+            <Payments />
+          </SideNavItem>,
+          <SideNavItem key="2">Credits: {this.props.auth.credits}</SideNavItem>,
+          <SideNavItem key="3" href="/api/logout">
+            Logout
+          </SideNavItem>
         ];
     }
   }

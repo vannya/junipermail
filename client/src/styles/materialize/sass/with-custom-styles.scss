@@ -1,13 +1,14 @@
 @import "./materialize.scss";
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 
-
-html, body, #root {
+html,
+body,
+#root {
   margin: 0;
-  padding: 0; 
+  padding: 0;
   width: 100%;
   height: 100%;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 nav {
@@ -16,7 +17,7 @@ nav {
   z-index: 1;
 }
 
-#sidenav-overlay{
+#sidenav-overlay {
   position: relative;
 }
 
@@ -45,7 +46,7 @@ nav {
   }
 }
 
-.landing{
+.landing {
   position: relative;
   height: 60%;
   width: 100%;
@@ -54,14 +55,14 @@ nav {
   text-align: center;
 }
 
-.overlay{
+.overlay {
   position: relative;
   height: 100%;
   width: 100%;
   background-color: rgba(#000000, 0.6);
 }
 
-.landing-title{
+.landing-title {
   position: absolute;
   top: 30%;
   padding: 0 1em;
@@ -72,7 +73,7 @@ nav {
   text-align: center;
 }
 
-.landing-subtitle{
+.landing-subtitle {
   position: absolute;
   top: 50%;
   padding: 0 1em;
@@ -84,21 +85,21 @@ nav {
 }
 
 .overlay > a > button {
-    position: absolute;
-    top: 65%;
-    margin: 0;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%)
+  position: absolute;
+  top: 65%;
+  margin: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
-.icon-section{
+.icon-section {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 4em 0;
 }
-.icon-wrapper{
+.icon-wrapper {
   padding: 1em;
   max-width: 300px;
 
@@ -110,6 +111,5 @@ nav {
     font-size: 2em;
   }
 }
-
 
 //#cc9900 is one other complementary color I can use for hightlights.
