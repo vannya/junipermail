@@ -1,0 +1,31 @@
+@import "./materialize.scss";
+
+nav {
+  background-color: #00cc99;
+}
+
+.btn {
+  background-color: #9900cc;
+
+  &:hover,
+  :focus {
+    background-color: #730099;
+  }
+}
+
+.cancelBtn {
+  background-color: #00cc99;
+  &:hover,
+  :focus {
+    background-color: #00a078;
+  }
+}
+
+.addBtn > i {
+  background-color: #9900cc;
+  &:hover,
+  :focus {
+    background-color: #730099;
+  }
+}
+//#cc9900 is one other complementary color I can use for hightlights.
