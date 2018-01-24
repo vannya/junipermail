@@ -6912,6 +6912,12 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   stroke-linecap: round;
   /*shape-rendering: crispEdges;*/ }
 
+/*
+
+  Customized Styling for use with Materialize.scss
+
+*/
+/* --- General Formatting --- */
 html,
 body,
 #root {
@@ -6929,6 +6935,27 @@ nav {
 #sidenav-overlay {
   position: relative; }
 
+/* --- /General Formatting --- */
+/* --- Navigation --- */
+.side-nav-btn {
+  margin-top: 2em;
+  margin-bottom: 1em; }
+  .side-nav-btn a {
+    text-align: center; }
+    .side-nav-btn a span > button {
+      width: 100%; }
+    .side-nav-btn a:hover {
+      background-color: #FFF !important; }
+
+.sidenav-title {
+  margin: 0;
+  padding: 1em 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.4);
+  background-color: #00cc99; }
+
+/* --- /Navigation --- */
+/* --- Buttons --- */
 .btn, .btn-large {
   background-color: #9900cc; }
   .btn:hover, .btn-large:hover,
@@ -6947,6 +6974,12 @@ nav {
   .addBtn > i :focus {
     background-color: #730099; }
 
+@media screen and (max-width: 600px) {
+  .btn-large {
+    padding: 0 12px; } }
+
+/* --- /Buttons --- */
+/* --- Landing Page --- */
 .landing {
   position: relative;
   height: 60%;
@@ -6954,6 +6987,9 @@ nav {
   background: url(../../assets/landing.jpg) no-repeat top right;
   background-size: cover;
   text-align: center; }
+  @media screen and (max-width: 1000px) and (orientation: landscape) {
+    .landing {
+      height: 100%; } }
 
 .overlay {
   position: relative;
@@ -6969,6 +7005,12 @@ nav {
   width: 100%;
   color: white;
   text-align: center; }
+  @media screen and (max-width: 600px) {
+    .landing-title {
+      font-size: 3em; } }
+  @media screen and (max-width: 460px) {
+    .landing-title {
+      font-size: 2em; } }
 
 .landing-subtitle {
   position: absolute;
@@ -6978,6 +7020,12 @@ nav {
   width: 100%;
   color: white;
   text-align: center; }
+  @media screen and (max-width: 1000px) and (orientation: landscape) {
+    .landing-subtitle {
+      top: 55%; } }
+  @media screen and (max-width: 600px) {
+    .landing-subtitle {
+      font-size: 1em; } }
 
 .overlay > a > button {
   position: absolute;
@@ -6986,12 +7034,22 @@ nav {
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%); }
+  @media screen and (max-width: 1000px) and (orientation: landscape) {
+    .overlay > a > button {
+      top: 75%; } }
+  @media screen and (max-width: 600px) {
+    .overlay > a > button {
+      top: 70%; } }
 
 .icon-section {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 4em 0; }
+  @media screen and (max-width: 600px) {
+    .icon-section {
+      flex-direction: column;
+      padding: 2em 0; } }
 
 .icon-wrapper {
   padding: 1em;
@@ -7001,32 +7059,50 @@ nav {
   .icon-wrapper .icon-label {
     font-size: 2em; }
 
+/* --- /Landing --- */
+/* --- Pages --- */
 .page-view {
   position: relative;
   margin: 0 auto;
   padding-top: 80px; }
-  .page-view .disclaimer {
-    text-align: center; }
-  .page-view .survey-review-info {
-    border: 1px solid #9900cc;
-    padding: 20px; }
-    .page-view .survey-review-info .btn-flat {
-      margin-top: 15px; }
-    .page-view .survey-review-info .survey-review-item {
-      padding-bottom: 10px; }
-      .page-view .survey-review-info .survey-review-item label {
-        font-size: 1.3em; }
-      .page-view .survey-review-info .survey-review-item div {
-        padding: 5px 0;
-        border-bottom: 1px solid grey; }
   .page-view .page-title {
     text-align: center;
     padding-bottom: 25px; }
-  .page-view .survey-form {
-    border: 1px solid #9900cc;
-    padding: 20px 20px 70px 20px; }
-    .page-view .survey-form .btn-flat {
-      margin-top: 15px; }
+
+/* --- /Pages --- */
+/* --- Survey Form --- */
+.survey-form {
+  border: 1px solid #9900cc;
+  padding: 20px 20px 70px 20px; }
+  .survey-form .btn-flat {
+    margin-top: 15px; }
+
+/* --- /Survey Form --- */
+/* --- Survey Review Form --- */
+.survey-review-info {
+  border: 1px solid #9900cc;
+  padding: 20px; }
+  .survey-review-info .btn-flat {
+    margin-top: 15px; }
+  .survey-review-info .survey-review-item {
+    padding-bottom: 10px; }
+    .survey-review-info .survey-review-item label {
+      font-size: 1.3em; }
+    .survey-review-info .survey-review-item div {
+      padding: 5px 0;
+      border-bottom: 1px solid grey; }
+
+.disclaimer {
+  text-align: center; }
+
+/* --- /Survey Review Form --- */
+/* --- Dashboard --- */
+.userView {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 150px;
+  background-color: #00cc99; }
 
 .card-opt {
   background-color: #FFF;
@@ -7050,26 +7126,4 @@ nav {
   right: 24px;
   align-self: center; }
 
-.userView {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 150px;
-  background-color: #00cc99; }
-
-.side-nav-btn {
-  margin-top: 2em;
-  margin-bottom: 1em; }
-  .side-nav-btn a {
-    text-align: center; }
-    .side-nav-btn a span > button {
-      width: 100%; }
-    .side-nav-btn a:hover {
-      background-color: #FFF !important; }
-
-.sidenav-title {
-  margin: 0;
-  padding: 1em 0;
-  text-align: center;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.4);
-  background-color: #00cc99; }
+/* --- /Dashboard --- */
