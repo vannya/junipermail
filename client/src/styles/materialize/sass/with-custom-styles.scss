@@ -68,7 +68,6 @@ nav {
   padding: 0 1em;
   font-size: 4em;
   width: 100%;
-  z-index: 1;
   color: white;
   text-align: center;
 }
@@ -79,7 +78,6 @@ nav {
   padding: 0 1em;
   font-size: 1.5em;
   width: 100%;
-  z-index: 1;
   color: white;
   text-align: center;
 }
@@ -163,8 +161,10 @@ nav {
 
 
 .card-action{
+  position: relative;
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
 }
 
 .survey-options{
@@ -173,7 +173,13 @@ nav {
   font-size: 1.5em;
   font-weight: 700;
   text-transform: uppercase;
+
 }
+  .survey-response{
+    position: absolute;
+    right: 24px;
+    align-self: center;
+  }
 
 .userView {
   display: flex;
@@ -198,6 +204,14 @@ nav {
       background-color: #FFF !important;
     }
   }
+}
+
+.sidenav-title{
+  margin: 0;
+  padding: 1em 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(grey, 0.4);
+  background-color: #00cc99;
 }
 
 //#cc9900 is one other complementary color I can use for hightlights.

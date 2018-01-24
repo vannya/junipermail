@@ -11,6 +11,9 @@ class Header extends Component {
         return;
       case false:
         return [
+          <li>
+            <h4 key="3" className="sidenav-title">JuniperMail</h4>
+          </li>,
           <SideNavItem key="1" href="/auth/google">
             Sign Up
           </SideNavItem>,
@@ -20,13 +23,20 @@ class Header extends Component {
         ];
       default:
         return [
-          <SideNavItem
-            userView
-            user={{
-              name: `${this.props.auth.name || "JuniparMail User"}`,
-              email: `${this.props.auth.email || ""}`
-            }}
-          />,
+          this.props.auth.name || this.props.auth.email ? (
+            <SideNavItem
+              userView
+              user={{
+                name: `${this.props.auth.name || ""}`,
+                email: `${this.props.auth.email || ""}`
+              }}
+              key="4"
+            />
+          ) : (
+            <li>
+              <h4 key="4" className="sidenav-title">JuniperMail</h4>
+            </li>
+          ),
           <SideNavItem key="1" className="side-nav-btn">
             <Payments />
           </SideNavItem>,
@@ -56,7 +66,7 @@ class Header extends Component {
           <li key="1">
             <Payments />
           </li>,
-          <li key="3" style={{ margin: "0 10px" }}>
+          <li key="3" style={{ margin: "0 20px" }}>
             Credits: {this.props.auth.credits}
           </li>,
           <li key="2">
