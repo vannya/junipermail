@@ -10,14 +10,21 @@ const surveyTemplate = require("../services/emailtemplates/surveytemplate");
 const Survey = mongoose.model("surveys");
 
 module.exports = app => {
+  app.get("/api/surveys", requireLogin, async (req, res) => {
+    const surveys = await Survey.find({ _user: req.user.id })
+      .select({recipients: 0}) //exclude recipients
+
+    res.send({surveys});
+  });
+
   app.get("/api/surveys/:surveyId/:choice", (req, res) => {
     const surveyId = req.params.surveyId;
     const choice = req.params.choice;
     res.redirect(`/surveys/${surveyId}/${choice}`);
   });
 
-  //If testing in the dev environment, be sure to update 
-  //Sendgrid with an updated ngrok link. Free service, 
+  //If testing in the dev environment, be sure to update
+  //Sendgrid with an updated ngrok link. Free service,
   //but new site with each server load.
   app.post("/api/surveys/webhooks", (req, res) => {
     const p = new Path("/api/surveys/:surveyId/:choice");
@@ -36,16 +43,19 @@ module.exports = app => {
       .compact()
       .uniqBy("email", "surveyId")
       .each(({ surveyId, email, choice }) => {
-        Survey.updateOne({
-          _id: surveyId,
-          recipients: {
-            $elemMatch: {email: email, responded: false }
+        Survey.updateOne(
+          {
+            _id: surveyId,
+            recipients: {
+              $elemMatch: { email: email, responded: false }
+            }
+          },
+          {
+            $inc: { [choice]: 1 },
+            $set: { "recipients.$.responded": true },
+            lastResponded: new Date()
           }
-        }, {
-          $inc: { [choice]: 1 },
-          $set: { 'recipients.$.responded': true },
-          lastResponded: new Date()
-        }).exec();
+        ).exec();
       })
       .value();
     res.send({});
