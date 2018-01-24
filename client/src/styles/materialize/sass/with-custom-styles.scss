@@ -175,4 +175,29 @@ nav {
   text-transform: uppercase;
 }
 
+.userView {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 150px;
+  background-color: #00cc99;
+}
+
+.side-nav-btn {
+  margin-top: 2em;
+  margin-bottom: 1em;
+
+  a {
+    text-align: center;
+    
+    span > button {
+      width: 100%;
+    }
+
+    &:hover{
+      background-color: #FFF !important;
+    }
+  }
+}
+
 //#cc9900 is one other complementary color I can use for hightlights.

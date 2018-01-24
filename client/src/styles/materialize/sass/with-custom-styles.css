@@ -7044,3 +7044,20 @@ nav {
   font-size: 1.5em;
   font-weight: 700;
   text-transform: uppercase; }
+
+.userView {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 150px;
+  background-color: #00cc99; }
+
+.side-nav-btn {
+  margin-top: 2em;
+  margin-bottom: 1em; }
+  .side-nav-btn a {
+    text-align: center; }
+    .side-nav-btn a span > button {
+      width: 100%; }
+    .side-nav-btn a:hover {
+      background-color: #FFF !important; }

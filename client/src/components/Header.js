@@ -20,7 +20,14 @@ class Header extends Component {
         ];
       default:
         return [
-          <SideNavItem key="1">
+          <SideNavItem
+            userView
+            user={{
+              name: `${this.props.auth.name || "JuniparMail User"}`,
+              email: `${this.props.auth.email || ""}`
+            }}
+          />,
+          <SideNavItem key="1" className="side-nav-btn">
             <Payments />
           </SideNavItem>,
           <SideNavItem key="2">Credits: {this.props.auth.credits}</SideNavItem>,
@@ -75,10 +82,7 @@ class Header extends Component {
           </ul>
           <SideNav
             trigger={
-              <a
-                data-activates="mobile-demo"
-                className="button-collapse"
-              >
+              <a data-activates="mobile-demo" className="button-collapse">
                 <i className="material-icons">menu</i>
               </a>
             }
