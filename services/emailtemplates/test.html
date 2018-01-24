@@ -1,3 +1,8 @@
+<!-- 
+  TEST FILE FOR HTML EMAIL CREATION ONLY.
+  DO NOT USE IN SITE.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,23 +14,19 @@
   <title>${survey.title}</title>
 </head>
 
-<body style="font-family: 'Montserrat', sans-serif; margin: 0 auto; max-width: 600px;">
-  <div style="text-align: center; max-width: 600px; border: 1px solid #9900cc; padding: 1em 2em;">
-    <h3>We'd like your input!</h3>
-    <p>${survey.body}</p>
-    <div style="margin: 0 auto; padding: 1em; max-width: 200px">
-      <div style="background-color: #00cc99; margin: 1em 0.5em; padding: 0.5em 1em;">
-        <a style="font-weight: 700; font-size: 1.5em; color: white; text-decoration: none;" href="${keys.redirectDomain}/api/surveys/${survey.id}/yes">Yes</a>
-      </div>
-      <div style="background-color: #00cc99; margin: 1em 0.5em; padding: 0.5em 1em;">
-        <a style="font-weight: 700; font-size: 1.5em; color: white; text-decoration: none;" href="${keys.redirectDomain}/api/surveys/${survey.id}/no">No</a>
+<body>
+    <div>
+      <h3>We'd like your input!</h3>
+      <p>${survey.body}</p>
+      <div>
+        <p>Please choose one:</p>
+        <p>
+          <a href="${keys.redirectDomain}/api/surveys/${survey.id}/yes">Yes</a> or <a href="${keys.redirectDomain}/api/surveys/${survey.id}/no">No</a>
+        </p>
       </div>
     </div>
-  </div>
-  <div style="background-color: #9900cc; color: white; text-align: center; padding: 0.5em 0;">Sent on behalf of <a href="mailto:${survey.useremail}" style="color: #00cc99; text-decoration: none;">${survey.name}</a> by <a href="https://junipermail.herokuapp.com/" style="color: #00cc99; text-decoration: none;">JuniperMail</a></div>
-  <div style="background-color: #9900cc; color: white; text-align: center; padding: 0.5em 0;"><a style="color: #00cc99; text-decoration: none;" href="mailto:${survey.useremail}?Subject=Unsubscribe&20Me">Unsubscribe</a></div>
-
-  </div>
-</body>
-
+    <p>Sent on behalf of <a href="mailto:${survey.useremail}" >${survey.name}</a> by <a href="https://junipermail.herokuapp.com/">JuniperMail</a></p>
+    <div><a href="mailto:${survey.useremail}?Subject=Unsubscribe&20Me">Click Here to Unsubscribe</a></div>
+    </div>
+  </body>
 </html>

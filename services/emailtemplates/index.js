@@ -1,3 +1,5 @@
 module.exports = {
-    main: require("./surveytemplatemain")
+    main: require("./main"),
+    simple: require("./simple"),
+    modern: require("./modern")
 }

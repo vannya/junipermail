@@ -1,6 +1,5 @@
 /*  
-  Basic Template for hooking up the survey process
-  Will add nicer survey in the future 
+  Main Survey Template in JuniperMail Theme
 */
 const keys = require("../../config/keys");
 
