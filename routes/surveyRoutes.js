@@ -6,6 +6,8 @@ const requireLogin = require("../middlewares/requireLogin");
 const requireCredits = require("../middlewares/requireCredits");
 const Mailer = require("../services/Mailer");
 const surveyTemplate = require("../services/emailtemplates/surveytemplate");
+const surveyTemplateMain = require("../services/emailtemplates/surveytemplatemain");
+const surveylist = require("../services/emailtemplates");
 
 const Survey = mongoose.model("surveys");
 
@@ -20,7 +22,7 @@ module.exports = app => {
 
   app.get("/api/surveys/:surveyId/:choice", (req, res) => {
     const surveyId = req.params.surveyId;
-    const choice = req.params.choice;
+    const choice = req.params.choice; 
     res.redirect(`/surveys/${surveyId}/${choice}`);
   });
 
@@ -63,20 +65,23 @@ module.exports = app => {
   });
 
   app.post("/api/surveys", requireLogin, requireCredits, async (req, res) => {
-    const { title, subject, body, recipients } = req.body;
+    const { title, subject, body, recipients, fromfield } = req.body;
 
     const survey = new Survey({
       title,
       subject,
       body,
+      fromfield,
       recipients: recipients.split(",").map(email => {
         return { email: email.trim() };
       }),
       _user: req.user.id,
+      name: req.user.name,
+      useremail: req.user.email,
       dateSent: Date.now()
     });
 
-    const mailer = new Mailer(survey, surveyTemplate(survey));
+    const mailer = new Mailer(survey, surveylist.main(survey));
 
     try {
       await mailer.send();
