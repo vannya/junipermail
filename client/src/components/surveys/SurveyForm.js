@@ -3,9 +3,11 @@ import React, { Component } from "react";
 import { reduxForm, Field } from "redux-form";
 import { Link } from "react-router-dom";
 import SurveyField from "./SurveyField";
+import SurveySelect from "./SurveySelect";
 import validateEmails from "../../utils/validateEmails";
 import validateSingleEmail from "../../utils/validateSingleEmail";
 import formFields from "./formFields";
+import surveyTemplateList from "./surveyTemplateList";
 
 class SurveyForm extends Component {
   state = {};
@@ -24,11 +26,27 @@ class SurveyForm extends Component {
     });
   }
 
+  renderSelect(){
+    const selectFields = [{label: "Survey Choice", name: "surveyChoice"}];
+    return _.map(selectFields, ({ label, name }) => {
+      return (
+        <Field
+          key={name}
+          component={SurveySelect}
+          name={name}
+          label={label}
+        />
+      );
+    });
+  }
+
   render() {
     return (
       <div className="survey-form">
         <form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
           {this.renderFields()}
+          {this.renderSelect()}
+          <div>
           <Link to="/surveys" className="cancelBtn btn-flat left white-text">
             Cancel
           </Link>
@@ -36,6 +54,7 @@ class SurveyForm extends Component {
             Next
             <i className="material-icons right">done</i>
           </button>
+          </div>
         </form>
       </div>
     );
@@ -53,6 +72,12 @@ function validate(values) {
       errors[name] = "You must provide a value";
     }
   });
+
+  _.each(surveyTemplateList, ({name}) => {
+    if (!values[name]) {
+      errors[name] = "You must provide a value";
+    }
+  })
 
   return errors;
 }

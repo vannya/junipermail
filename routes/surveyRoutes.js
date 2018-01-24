@@ -65,13 +65,14 @@ module.exports = app => {
   });
 
   app.post("/api/surveys", requireLogin, requireCredits, async (req, res) => {
-    const { title, subject, body, recipients, fromfield } = req.body;
+    const { title, subject, body, recipients, fromfield, surveyChoice } = req.body;
 
     const survey = new Survey({
       title,
       subject,
       body,
       fromfield,
+      surveyChoice,
       recipients: recipients.split(",").map(email => {
         return { email: email.trim() };
       }),
@@ -80,12 +81,14 @@ module.exports = app => {
       useremail: req.user.email,
       dateSent: Date.now()
     });
-
-    const mailer = new Mailer(survey, surveylist.main(survey));
+    
+    const surveyToAccess = surveylist[surveyChoice];
+ 
+    const mailer = new Mailer(survey, surveyToAccess(survey));
 
     try {
       await mailer.send();
-      await survey.save();
+      await survey.save(); 
       req.user.credits -= 1;
       const user = await req.user.save();
 

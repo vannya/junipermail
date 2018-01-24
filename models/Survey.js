@@ -9,6 +9,7 @@ const surveySchema = new Schema({
   fromfield: String,
   name: String,
   useremail: String,
+  surveyChoice: String,
   recipients: [RecipientSchema],
   yes: { type: Number, default: 0 },
   no: { type: Number, default: 0 },

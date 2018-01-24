@@ -3,7 +3,6 @@ const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9
 export default email => {
   email = email.trim();
   email = re.test(email) === false ? email : "";
-  console.log(email);
 
   if (email !== "") {
     return "Email is invalid";
