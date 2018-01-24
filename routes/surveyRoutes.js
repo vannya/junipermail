@@ -11,9 +11,9 @@ const Survey = mongoose.model("surveys");
 
 module.exports = app => {
   app.get("/api/surveys/:surveyId/:choice", (req, res) => {
-    //Create this page as a thank you on the front end.
-    //Or possibly redirect to a whole new page.
-    res.send("Thanks for voting!");
+    const surveyId = req.params.surveyId;
+    const choice = req.params.choice;
+    res.redirect(`/surveys/${surveyId}/${choice}`);
   });
 
   //If testing in the dev environment, be sure to update 
