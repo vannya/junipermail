@@ -76,7 +76,6 @@ class Header extends Component {
           <SideNav
             trigger={
               <a
-                href="#"
                 data-activates="mobile-demo"
                 className="button-collapse"
               >

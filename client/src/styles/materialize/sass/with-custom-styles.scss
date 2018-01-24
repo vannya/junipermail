@@ -112,4 +112,48 @@ nav {
   }
 }
 
+.page-view{
+  position: relative;
+  margin: 0 auto;
+  padding-top: 80px;
+
+  .disclaimer{
+    text-align: center;
+  }
+
+  .survey-review-info{
+    border: 1px solid #9900cc;
+    padding: 20px;
+
+    .btn-flat{
+      margin-top: 15px;
+    }
+
+    .survey-review-item{
+      padding-bottom: 10px;
+      label {
+        font-size: 1.3em;
+      }
+      div{
+        padding: 5px 0;
+        border-bottom: 1px solid grey;
+      }
+    }
+  }
+
+  .survey-title{
+    text-align: center;
+    padding-bottom: 25px;
+  }
+
+  .survey-form{
+    border: 1px solid #9900cc;
+    padding: 20px 20px 70px 20px;
+    
+    .btn-flat{
+      margin-top: 15px;
+    }
+  }
+}
+
 //#cc9900 is one other complementary color I can use for hightlights.

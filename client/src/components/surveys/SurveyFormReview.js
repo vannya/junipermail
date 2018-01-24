@@ -8,7 +8,7 @@ import * as actions from "../../actions";
 const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
   const reviewFields = _.map(formFields, ({ name, label }) => {
     return (
-      <div key={name}>
+      <div key={name} className="survey-review-item">
         <label>{label}</label>
         <div>{formValues[name]}</div>
       </div>
@@ -16,9 +16,10 @@ const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
   });
 
   return (
-    <div>
-      <h5>Please confirm your entries</h5>
-      {reviewFields}
+    <div className="container page-view">
+      <h5 className="survey-title">Please confirm your entries</h5>
+      <div className="survey-review-info">{reviewFields}
+  
       <button className="cancelBtn btn-flat white-text" onClick={onCancel}>
         Back
       </button>
@@ -28,6 +29,8 @@ const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
       >
         Send Survey <i className="material-icons right">email</i>
       </button>
+      </div>
+      <p className="disclaimer">Please note: Your survey will be sent and credits deducted once you click "Send Survey".</p>
     </div>
   );
 };
