@@ -54,7 +54,7 @@ nav {
   text-align: center;
   border-bottom: 1px solid rgba(grey, 0.4);
   background-color: #00cc99;
-}
+} 
 
 /* --- /Navigation --- */
 
@@ -103,7 +103,7 @@ nav {
   background-size: cover;
   text-align: center;
 
-  @media screen and (max-width: 1000px) and (orientation: landscape){
+  @media screen and (max-width: 800px) and (orientation: landscape){
     height: 100%;
   }
 }
@@ -125,7 +125,7 @@ nav {
   text-align: center;
   
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 620px) {
     font-size: 3em;
   }
 
@@ -285,3 +285,14 @@ nav {
 }
 
 /* --- /Dashboard --- */
+
+.thankyou {
+  margin: 0 auto;
+  // max-width: 1000px;
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: auto;
+}
+}

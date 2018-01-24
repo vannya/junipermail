@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { SideNav, SideNavItem } from "react-materialize";
 import Payments from "./Payments";
+import logo from "../styles/assets/jmlogosmallwhite.png";
 
 class Header extends Component {
   renderSideNav() {
@@ -85,7 +86,7 @@ class Header extends Component {
             to={this.props.auth ? "/surveys" : "/"}
             className="brand-logo center"
           >
-            JuniperMail
+            <img src={logo} alt="" />
           </Link>
 
           <ul id="nav-mobile" className="right hide-on-med-and-down">

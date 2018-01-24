@@ -6,6 +6,7 @@ import Header from "./Header";
 import Landing from "./Landing";
 import Dashboard from "./Dashboard";
 import SurveyNew from "./surveys/SurveyNew";
+import ThankYou from "./ThankYou";
 
 class App extends Component {
   componentDidMount() {
@@ -21,7 +22,8 @@ class App extends Component {
             <Route exact path="/" component={Landing} />
             <Route exact path="/surveys" component={Dashboard} />
             <Route path="/surveys/new" component={SurveyNew} />
-            <Route path="/surveys/:surveyId/:choice" component={Landing}/>
+            <Route path="/surveys/:surveyId/:choice" component={ThankYou}/>
+            <Route path="/thankyou" component={ThankYou}/>
           </div>
         </BrowserRouter>
       </div>
