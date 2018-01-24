@@ -141,7 +141,7 @@ nav {
     }
   }
 
-  .survey-title{
+  .page-title{
     text-align: center;
     padding-bottom: 25px;
   }
@@ -154,6 +154,25 @@ nav {
       margin-top: 15px;
     }
   }
+}
+
+.card-opt{
+  background-color: #FFF;
+  border: 1px solid #9900cc;
+}
+
+
+.card-action{
+  display: flex;
+  flex-direction: row;
+}
+
+.survey-options{
+  padding-right: 20px;
+  color: #9900cc;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 //#cc9900 is one other complementary color I can use for hightlights.

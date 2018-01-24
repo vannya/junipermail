@@ -7021,7 +7021,7 @@ nav {
       .page-view .survey-review-info .survey-review-item div {
         padding: 5px 0;
         border-bottom: 1px solid grey; }
-  .page-view .survey-title {
+  .page-view .page-title {
     text-align: center;
     padding-bottom: 25px; }
   .page-view .survey-form {
@@ -7029,3 +7029,18 @@ nav {
     padding: 20px 20px 70px 20px; }
     .page-view .survey-form .btn-flat {
       margin-top: 15px; }
+
+.card-opt {
+  background-color: #FFF;
+  border: 1px solid #9900cc; }
+
+.card-action {
+  display: flex;
+  flex-direction: row; }
+
+.survey-options {
+  padding-right: 20px;
+  color: #9900cc;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase; }
