@@ -1,7 +1,12 @@
 # JuniperMail
-## Collect feedback from your users
+##### Collect feedback from your users
 
 ## [Live Demo](https://junipermail.herokuapp.com)
 
-#### Frontend: ReactJS, Redux, React Router V4, MaterializeCSS, Redux Form
-#### Backend: Express, Node.js, Passport, Sendgrid, MongoDB
+| Frontend Tech | Backend Tech |
+| ------ | ------ |
+| ReactJS | Express |
+| Redux | Node.js |
+| React Router V4 | Passport |
+| MaterializeCSS | Sendgrid |
+| Redux Form | MongoDB |

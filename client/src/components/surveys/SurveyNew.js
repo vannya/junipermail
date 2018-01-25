@@ -19,9 +19,12 @@ class SurveyNew extends Component {
       );
     }
     return (
-      <SurveyForm
-        onSurveySubmit={() => this.setState({ showFormReview: true })}
-      />
+      <div className="container page-view">
+        <h3 className="page-title">Create Survey</h3>
+        <SurveyForm
+          onSurveySubmit={() => this.setState({ showFormReview: true })}
+        />
+      </div>
     );
   }
 

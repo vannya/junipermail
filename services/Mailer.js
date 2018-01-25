@@ -3,11 +3,11 @@ const helper = sendgrid.mail;
 const keys = require("../config/keys");
 
 class Mailer extends helper.Mail {
-  constructor({ subject, recipients }, content) {
+  constructor({ subject, recipients, fromfield, _user }, content) {
     super();
 
     this.sgApi = sendgrid(keys.sendGridKey);
-    this.from_email = new helper.Email("no-reply@junipermail.herokuapp.com");
+    this.from_email = new helper.Email(fromfield);
     this.subject = subject;
     this.body = new helper.Content("text/html", content);
     this.recipients = this.formatAddresses(recipients);
@@ -35,11 +35,12 @@ class Mailer extends helper.Mail {
 
   // Add recipients to mailer
   addRecipients() {
-    const personalize = new helper.Personalization();
     this.recipients.forEach(recipient => {
+      const personalize = new helper.Personalization();
       personalize.addTo(recipient);
+      this.addPersonalization(personalize);
     });
-    this.addPersonalization(personalize);
+
   }
 
   // Send the mailer to Sendgrid

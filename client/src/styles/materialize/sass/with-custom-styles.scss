@@ -1,8 +1,64 @@
 @import "./materialize.scss";
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+/*
+
+  Customized Styling for use with Materialize.scss
+
+*/
+
+/* --- General Formatting --- */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+}
 
 nav {
+  position: absolute;
+  background-color: rgba(#000000, 0.6);
+  z-index: 1;
+}
+
+#sidenav-overlay {
+  position: relative;
+}
+
+/* --- /General Formatting --- */
+
+/* --- Navigation --- */
+
+.side-nav-btn {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  a {
+    text-align: center;
+
+    span > button {
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: #fff !important;
+    }
+  }
+}
+
+.sidenav-title {
+  margin: 0;
+  padding: 1em 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(grey, 0.4);
   background-color: #00cc99;
 }
+
+/* --- /Navigation --- */
+
+/* --- Buttons --- */
 
 .btn {
   background-color: #9900cc;
@@ -28,4 +84,213 @@ nav {
     background-color: #730099;
   }
 }
-//#cc9900 is one other complementary color I can use for hightlights.
+
+.btn-large {
+  @media screen and (max-width: 600px) {
+    padding: 0 12px;
+  }
+}
+
+/* --- /Buttons --- */
+
+/* --- Landing Page --- */
+
+.landing {
+  position: relative;
+  height: 60%;
+  width: 100%;
+  background: url(../../assets/landing.jpg) no-repeat top right;
+  background-size: cover;
+  text-align: center;
+
+  @media screen and (max-width: 800px) and (orientation: landscape) {
+    height: 100%;
+  }
+}
+
+.overlay {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(#000000, 0.6);
+}
+
+.landing-title {
+  position: absolute;
+  top: 30%;
+  padding: 0 1em;
+  font-size: 4em;
+  width: 100%;
+  color: white;
+  text-align: center;
+
+  @media screen and (max-width: 620px) {
+    font-size: 3em;
+  }
+
+  @media screen and (max-width: 460px) {
+    font-size: 2em;
+  }
+}
+
+.landing-subtitle {
+  position: absolute;
+  top: 50%;
+  padding: 0 1em;
+  font-size: 1.5em;
+  width: 100%;
+  color: white;
+  text-align: center;
+
+  @media screen and (max-width: 1000px) and (orientation: landscape) {
+    top: 55%;
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 1em;
+  }
+}
+
+.overlay > a > button {
+  position: absolute;
+  top: 65%;
+  margin: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  @media screen and (max-width: 1000px) and (orientation: landscape) {
+    top: 75%;
+  }
+  @media screen and (max-width: 600px) {
+    top: 70%;
+  }
+}
+
+.icon-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4em 0;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    padding: 2em 0;
+  }
+}
+
+.icon-wrapper {
+  padding: 1em;
+  max-width: 300px;
+
+  i {
+    color: #9900cc;
+  }
+
+  .icon-label {
+    font-size: 2em;
+  }
+}
+
+/* --- /Landing --- */
+
+/* --- Pages --- */
+
+.page-view {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 80px;
+
+  .page-title {
+    text-align: center;
+    padding-bottom: 25px;
+  }
+}
+
+/* --- /Pages --- */
+
+/* --- Survey Form --- */
+
+.survey-form {
+  border: 1px solid #9900cc;
+  padding: 20px 20px 70px 20px;
+
+  .btn-flat {
+    margin-top: 15px;
+  }
+}
+
+/* --- /Survey Form --- */
+
+/* --- Survey Review Form --- */
+
+.survey-review-info {
+  border: 1px solid #9900cc;
+  padding: 20px;
+
+  .btn-flat {
+    margin-top: 15px;
+  }
+
+  .survey-review-item {
+    padding-bottom: 10px;
+    label {
+      font-size: 1.3em;
+    }
+    div {
+      padding: 5px 0;
+      font-style: italic;
+    }
+  }
+}
+
+.disclaimer {
+  text-align: center;
+}
+
+/* --- /Survey Review Form --- */
+
+/* --- Dashboard --- */
+.userView {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 150px;
+  background-color: #00cc99;
+}
+
+.card-opt {
+  background-color: #fff;
+  border: 1px solid #9900cc;
+}
+
+.card-action {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.survey-options {
+  padding-right: 20px;
+  color: #9900cc;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.survey-response {
+  position: absolute;
+  right: 24px;
+  align-self: center;
+}
+
+/* --- /Dashboard --- */
+
+.thankyou {
+  margin: 0 auto;
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
