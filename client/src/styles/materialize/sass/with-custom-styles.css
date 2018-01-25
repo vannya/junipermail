@@ -6945,7 +6945,7 @@ nav {
     .side-nav-btn a span > button {
       width: 100%; }
     .side-nav-btn a:hover {
-      background-color: #FFF !important; }
+      background-color: #fff !important; }
 
 .sidenav-title {
   margin: 0;
@@ -7105,7 +7105,7 @@ nav {
   background-color: #00cc99; }
 
 .card-opt {
-  background-color: #FFF;
+  background-color: #fff;
   border: 1px solid #9900cc; }
 
 .card-action {

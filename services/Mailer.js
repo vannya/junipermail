@@ -35,11 +35,12 @@ class Mailer extends helper.Mail {
 
   // Add recipients to mailer
   addRecipients() {
-    const personalize = new helper.Personalization();
     this.recipients.forEach(recipient => {
+      const personalize = new helper.Personalization();
       personalize.addTo(recipient);
+      this.addPersonalization(personalize);
     });
-    this.addPersonalization(personalize);
+
   }
 
   // Send the mailer to Sendgrid
