@@ -17,26 +17,23 @@ const Landing = () => {
       <div className="icon-section">
         <div className="icon-wrapper">
           <i className="material-icons medium">developer_board</i>
-          <div className="icon-label">Modern</div>
+          <div className="icon-label">Quick Setup</div>
           <div className="blurb">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod
+            Get your survey sent out in minutes with our preformatted surveys.
           </div>
         </div>
         <div className="icon-wrapper">
           <i className="material-icons medium">content_copy</i>
           <div className="icon-label">Easy To Use</div>
           <div className="blurb">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod
+            Pick your survey, fill out a short form, add your recipients and send!
           </div>
         </div>
         <div className="icon-wrapper">
           <i className="material-icons medium">code</i>
           <div className="icon-label">Clean Design</div>
           <div className="icon-blurb">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod
+            Surveys to save your customers time and maximize responses.
           </div>
         </div>
       </div>
