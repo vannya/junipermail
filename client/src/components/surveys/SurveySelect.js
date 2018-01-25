@@ -16,14 +16,20 @@ const SurveySelect = ({ input, label, meta: { error, touched } }) => {
 
   return (
     <div>
-    <Row>
-      <Input {...input} s={12} type="select" label={label} name="surveyChoice">
-        <option />
-        {renderOptions()}
-      </Input>
+      <Row>
+        <Input
+          {...input}
+          s={12}
+          type="select"
+          label={label}
+          name="surveyChoice"
+        >
+          <option />
+          {renderOptions()}
+        </Input>
       </Row>
       <div className="red-text error">{touched && error}</div>
-      </div>
+    </div>
   );
 };
 

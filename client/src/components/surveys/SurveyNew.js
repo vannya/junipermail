@@ -28,7 +28,7 @@ class SurveyNew extends Component {
     );
   }
 
-  render() { 
+  render() {
     return <div>{this.renderContent()}</div>;
   }
 }

@@ -26,7 +26,8 @@ const Landing = () => {
           <i className="material-icons medium">content_copy</i>
           <div className="icon-label">Easy To Use</div>
           <div className="blurb">
-            Pick your survey, fill out a short form, add your recipients and send!
+            Pick your survey, fill out a short form, add your recipients and
+            send!
           </div>
         </div>
         <div className="icon-wrapper">
