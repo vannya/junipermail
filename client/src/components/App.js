@@ -14,15 +14,16 @@ class App extends Component {
 
   render() {
     return (
-      <div style={{height: "100%", width: "100%"}}>
+      <div style={{ height: "100%", width: "100%" }}>
         <BrowserRouter>
-          <div style={{height: "100%", width: "100%"}}>
+          <div style={{ height: "100%", width: "100%" }}>
             <Header />
             <Route exact path="/" component={Landing} />
             <Route exact path="/surveys" component={Dashboard} />
             <Route path="/surveys/new" component={SurveyNew} />
+            <Route path="/surveys/:surveyId/:choice" component={Landing}/>
           </div>
-        </BrowserRouter> 
+        </BrowserRouter>
       </div>
     );
   }

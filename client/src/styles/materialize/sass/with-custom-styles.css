@@ -6912,12 +6912,14 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   stroke-linecap: round;
   /*shape-rendering: crispEdges;*/ }
 
-html, body, #root {
+html,
+body,
+#root {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: 'Montserrat', sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 nav {
   position: absolute;
@@ -7000,3 +7002,45 @@ nav {
     color: #9900cc; }
   .icon-wrapper .icon-label {
     font-size: 2em; }
+
+.page-view {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 80px; }
+  .page-view .disclaimer {
+    text-align: center; }
+  .page-view .survey-review-info {
+    border: 1px solid #9900cc;
+    padding: 20px; }
+    .page-view .survey-review-info .btn-flat {
+      margin-top: 15px; }
+    .page-view .survey-review-info .survey-review-item {
+      padding-bottom: 10px; }
+      .page-view .survey-review-info .survey-review-item label {
+        font-size: 1.3em; }
+      .page-view .survey-review-info .survey-review-item div {
+        padding: 5px 0;
+        border-bottom: 1px solid grey; }
+  .page-view .page-title {
+    text-align: center;
+    padding-bottom: 25px; }
+  .page-view .survey-form {
+    border: 1px solid #9900cc;
+    padding: 20px 20px 70px 20px; }
+    .page-view .survey-form .btn-flat {
+      margin-top: 15px; }
+
+.card-opt {
+  background-color: #FFF;
+  border: 1px solid #9900cc; }
+
+.card-action {
+  display: flex;
+  flex-direction: row; }
+
+.survey-options {
+  padding-right: 20px;
+  color: #9900cc;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase; }
