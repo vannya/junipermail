@@ -1,7 +1,14 @@
-# JuniperMail
-##### Collect feedback from your users
+![JuniperMail](/client/src/styles/assets/jmlogo.png "JuniperMail")
+
+##### Collect feedback and get the insights you need from your users.
 
 ## [Live Demo](https://junipermail.herokuapp.com)
+
+To do:  
+1. Docs for getting your own set of keys for development.
+2. Allow users to delete surveys.
+3. Complete user dashboard/account tab overhaul.
+4. Improved survey metrics.
 
 | Frontend Tech | Backend Tech |
 | ------ | ------ |
