@@ -10,4 +10,4 @@ const SurveyField = ({ input, label, meta: { error, touched } }) => {
   );
 };
 
-export default SurveyField; 
+export default SurveyField;

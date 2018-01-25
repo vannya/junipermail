@@ -13,7 +13,9 @@ class Header extends Component {
       case false:
         return [
           <li>
-            <h4 key="3" className="sidenav-title">JuniperMail</h4>
+            <h4 key="3" className="sidenav-title">
+              JuniperMail
+            </h4>
           </li>,
           <SideNavItem key="1" href="/auth/google">
             Sign Up
@@ -35,14 +37,18 @@ class Header extends Component {
             />
           ) : (
             <li>
-              <h4 key="4" className="sidenav-title">JuniperMail</h4>
+              <h4 key="4" className="sidenav-title">
+                JuniperMail
+              </h4>
             </li>
           ),
           <SideNavItem key="1" className="side-nav-btn">
             <Payments />
           </SideNavItem>,
           <SideNavItem key="2">Credits: {this.props.auth.credits}</SideNavItem>,
-          <SideNavItem key="5" href="/surveys">Dashboard</SideNavItem>,
+          <SideNavItem key="5" href="/surveys">
+            Dashboard
+          </SideNavItem>,
           <SideNavItem key="3" href="/api/logout">
             Logout
           </SideNavItem>

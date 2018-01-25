@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import image from '../styles/assets/thankyou.jpg';
+import React from "react";
+import image from "../styles/assets/thankyou.jpg";
 
 const ThankYou = () => {
   return (
@@ -9,6 +9,6 @@ const ThankYou = () => {
       </div>
     </div>
   );
-}
+};
 
 export default ThankYou;

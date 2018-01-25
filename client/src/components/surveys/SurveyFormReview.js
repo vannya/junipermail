@@ -22,7 +22,11 @@ const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
         {reviewFields}
         <div className="survey-review-item">
           <label>Survey Template</label>
-          <div>{surveyTemplateList.map(key => { return (key.value === formValues.surveyChoice) ? key.label : "" })}</div>
+          <div>
+            {surveyTemplateList.map(key => {
+              return key.value === formValues.surveyChoice ? key.label : "";
+            })}
+          </div>
         </div>
 
         <button className="cancelBtn btn-flat white-text" onClick={onCancel}>

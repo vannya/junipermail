@@ -26,16 +26,11 @@ class SurveyForm extends Component {
     });
   }
 
-  renderSelect(){
-    const selectFields = [{label: "Survey Choice", name: "surveyChoice"}];
+  renderSelect() {
+    const selectFields = [{ label: "Survey Choice", name: "surveyChoice" }];
     return _.map(selectFields, ({ label, name }) => {
       return (
-        <Field
-          key={name}
-          component={SurveySelect}
-          name={name}
-          label={label}
-        />
+        <Field key={name} component={SurveySelect} name={name} label={label} />
       );
     });
   }
@@ -47,13 +42,13 @@ class SurveyForm extends Component {
           {this.renderFields()}
           {this.renderSelect()}
           <div>
-          <Link to="/surveys" className="cancelBtn btn-flat left white-text">
-            Cancel
-          </Link>
-          <button type="submit" className="btn btn-flat right white-text">
-            Next
-            <i className="material-icons right">done</i>
-          </button>
+            <Link to="/surveys" className="cancelBtn btn-flat left white-text">
+              Cancel
+            </Link>
+            <button type="submit" className="btn btn-flat right white-text">
+              Next
+              <i className="material-icons right">done</i>
+            </button>
           </div>
         </form>
       </div>
@@ -73,11 +68,11 @@ function validate(values) {
     }
   });
 
-  _.each(surveyTemplateList, ({name}) => {
+  _.each(surveyTemplateList, ({ name }) => {
     if (!values[name]) {
       errors[name] = "You must provide a value";
     }
-  })
+  });
 
   return errors;
 }
@@ -85,5 +80,5 @@ function validate(values) {
 export default reduxForm({
   validate: validate,
   form: "surveyForm",
-  destroyOnUnmount: false // persists form data 
+  destroyOnUnmount: false // persists form data
 })(SurveyForm);
