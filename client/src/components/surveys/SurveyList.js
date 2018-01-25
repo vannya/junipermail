@@ -23,6 +23,8 @@ class SurveyList extends Component {
           <div className="card-action">
             <div className="survey-options">Yes: {survey.yes}</div>
             <div className="survey-options">No: {survey.no}</div>
+            <div className="survey-options">Total: {survey.yes + survey.no}</div>
+            <span className="survey-response">Last Response: {new Date(survey.lastResponded).toLocaleDateString()}</span>
           </div>
         </div>
       );

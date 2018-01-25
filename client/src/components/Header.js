@@ -11,6 +11,9 @@ class Header extends Component {
         return;
       case false:
         return [
+          <li>
+            <h4 key="3" className="sidenav-title">JuniperMail</h4>
+          </li>,
           <SideNavItem key="1" href="/auth/google">
             Sign Up
           </SideNavItem>,
@@ -20,7 +23,21 @@ class Header extends Component {
         ];
       default:
         return [
-          <SideNavItem key="1">
+          this.props.auth.name || this.props.auth.email ? (
+            <SideNavItem
+              userView
+              user={{
+                name: `${this.props.auth.name || ""}`,
+                email: `${this.props.auth.email || ""}`
+              }}
+              key="4"
+            />
+          ) : (
+            <li>
+              <h4 key="4" className="sidenav-title">JuniperMail</h4>
+            </li>
+          ),
+          <SideNavItem key="1" className="side-nav-btn">
             <Payments />
           </SideNavItem>,
           <SideNavItem key="2">Credits: {this.props.auth.credits}</SideNavItem>,
@@ -49,7 +66,7 @@ class Header extends Component {
           <li key="1">
             <Payments />
           </li>,
-          <li key="3" style={{ margin: "0 10px" }}>
+          <li key="3" style={{ margin: "0 20px" }}>
             Credits: {this.props.auth.credits}
           </li>,
           <li key="2">
@@ -75,10 +92,7 @@ class Header extends Component {
           </ul>
           <SideNav
             trigger={
-              <a
-                data-activates="mobile-demo"
-                className="button-collapse"
-              >
+              <a data-activates="mobile-demo" className="button-collapse">
                 <i className="material-icons">menu</i>
               </a>
             }

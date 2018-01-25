@@ -6967,7 +6967,6 @@ nav {
   padding: 0 1em;
   font-size: 4em;
   width: 100%;
-  z-index: 1;
   color: white;
   text-align: center; }
 
@@ -6977,7 +6976,6 @@ nav {
   padding: 0 1em;
   font-size: 1.5em;
   width: 100%;
-  z-index: 1;
   color: white;
   text-align: center; }
 
@@ -7035,8 +7033,10 @@ nav {
   border: 1px solid #9900cc; }
 
 .card-action {
+  position: relative;
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  justify-content: flex-start; }
 
 .survey-options {
   padding-right: 20px;
@@ -7044,3 +7044,32 @@ nav {
   font-size: 1.5em;
   font-weight: 700;
   text-transform: uppercase; }
+
+.survey-response {
+  position: absolute;
+  right: 24px;
+  align-self: center; }
+
+.userView {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 150px;
+  background-color: #00cc99; }
+
+.side-nav-btn {
+  margin-top: 2em;
+  margin-bottom: 1em; }
+  .side-nav-btn a {
+    text-align: center; }
+    .side-nav-btn a span > button {
+      width: 100%; }
+    .side-nav-btn a:hover {
+      background-color: #FFF !important; }
+
+.sidenav-title {
+  margin: 0;
+  padding: 1em 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.4);
+  background-color: #00cc99; }
