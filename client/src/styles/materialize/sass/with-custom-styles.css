@@ -2064,7 +2064,7 @@ video.responsive-video {
   display: inline-block;
   float: none; }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1116px) {
   .pagination {
     width: 100%; }
     .pagination li.prev,
@@ -2144,7 +2144,7 @@ ul.staggered-list li {
   .hide-on-small-only, .hide-on-small-and-down {
     display: none !important; } }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1116px) {
   .hide-on-med-and-down {
     display: none !important; } }
 
@@ -2152,19 +2152,19 @@ ul.staggered-list li {
   .hide-on-med-and-up {
     display: none !important; } }
 
-@media only screen and (min-width: 600px) and (max-width: 992px) {
+@media only screen and (min-width: 600px) and (max-width: 1116px) {
   .hide-on-med-only {
     display: none !important; } }
 
-@media only screen and (min-width: 993px) {
+@media only screen and (min-width: 1117px) {
   .hide-on-large-only {
     display: none !important; } }
 
-@media only screen and (min-width: 993px) {
+@media only screen and (min-width: 1117px) {
   .show-on-large {
     display: block !important; } }
 
-@media only screen and (min-width: 600px) and (max-width: 992px) {
+@media only screen and (min-width: 600px) and (max-width: 1116px) {
   .show-on-medium {
     display: block !important; } }
 
@@ -2176,7 +2176,7 @@ ul.staggered-list li {
   .show-on-medium-and-up {
     display: block !important; } }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1116px) {
   .show-on-medium-and-down {
     display: block !important; } }
 
@@ -2227,7 +2227,7 @@ td, th {
   vertical-align: middle;
   border-radius: 2px; }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1116px) {
   table.responsive-table {
     width: 100%;
     border-collapse: collapse;
@@ -2520,7 +2520,7 @@ nav ul a span.badge {
   .container {
     width: 85%; } }
 
-@media only screen and (min-width: 993px) {
+@media only screen and (min-width: 1117px) {
   .container {
     width: 70%; } }
 
@@ -2818,7 +2818,7 @@ nav ul a span.badge {
         right: 100%; }
       .row .col.push-m12 {
         left: 100%; } }
-    @media only screen and (min-width: 993px) {
+    @media only screen and (min-width: 1117px) {
       .row .col.l1 {
         width: 8.33333%;
         margin-left: auto;
@@ -3111,7 +3111,7 @@ nav {
   nav .nav-wrapper {
     position: relative;
     height: 100%; }
-  @media only screen and (min-width: 993px) {
+  @media only screen and (min-width: 1117px) {
     nav a.button-collapse {
       display: none; } }
   nav .button-collapse {
@@ -3132,7 +3132,7 @@ nav {
     nav .brand-logo.center {
       left: 50%;
       transform: translateX(-50%); }
-    @media only screen and (max-width: 992px) {
+    @media only screen and (max-width: 1116px) {
       nav .brand-logo {
         left: 50%;
         transform: translateX(-50%); }
@@ -3256,7 +3256,7 @@ html {
   @media only screen and (min-width: 0) {
     html {
       font-size: 14px; } }
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 1116px) {
     html {
       font-size: 14.5px; } }
   @media only screen and (min-width: 1200px) {
@@ -3524,12 +3524,12 @@ small {
     #toast-container {
       min-width: 100%;
       bottom: 0%; } }
-  @media only screen and (min-width: 601px) and (max-width: 992px) {
+  @media only screen and (min-width: 601px) and (max-width: 1116px) {
     #toast-container {
       left: 5%;
       bottom: 7%;
       max-width: 90%; } }
-  @media only screen and (min-width: 993px) {
+  @media only screen and (min-width: 1117px) {
     #toast-container {
       top: 10%;
       right: 7%;
@@ -3623,7 +3623,7 @@ small {
     background-color: #f6b2b5;
     will-change: left, right; }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1116px) {
   .tabs {
     display: flex; }
     .tabs .tab {
@@ -4028,7 +4028,7 @@ button.btn-floating {
   overflow-y: auto;
   border-radius: 2px;
   will-change: top, opacity; }
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 1116px) {
     .modal {
       width: 80%; } }
   .modal h1, .modal h2, .modal h3, .modal h4 {
@@ -4639,7 +4639,7 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
     width: calc(100% - 3rem); }
   .input-field .prefix ~ label {
     margin-left: 3rem; }
-  @media only screen and (max-width: 992px) {
+  @media only screen and (max-width: 1116px) {
     .input-field .prefix ~ input {
       width: 86%;
       width: calc(100% - 3rem); } }
@@ -5475,7 +5475,7 @@ input[type=range]:focus::-ms-fill-upper {
     right: 0;
     left: auto; }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1116px) {
   .side-nav.fixed {
     transform: translateX(-105%); }
     .side-nav.fixed.right-aligned {
@@ -6945,7 +6945,7 @@ nav {
     .side-nav-btn a span > button {
       width: 100%; }
     .side-nav-btn a:hover {
-      background-color: #FFF !important; }
+      background-color: #fff !important; }
 
 .sidenav-title {
   margin: 0;
@@ -6987,7 +6987,7 @@ nav {
   background: url(../../assets/landing.jpg) no-repeat top right;
   background-size: cover;
   text-align: center; }
-  @media screen and (max-width: 1000px) and (orientation: landscape) {
+  @media screen and (max-width: 800px) and (orientation: landscape) {
     .landing {
       height: 100%; } }
 
@@ -7005,7 +7005,7 @@ nav {
   width: 100%;
   color: white;
   text-align: center; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 620px) {
     .landing-title {
       font-size: 3em; } }
   @media screen and (max-width: 460px) {
@@ -7105,7 +7105,7 @@ nav {
   background-color: #00cc99; }
 
 .card-opt {
-  background-color: #FFF;
+  background-color: #fff;
   border: 1px solid #9900cc; }
 
 .card-action {
@@ -7127,3 +7127,9 @@ nav {
   align-self: center; }
 
 /* --- /Dashboard --- */
+.thankyou {
+  margin: 0 auto;
+  width: 100%; }
+  .thankyou img {
+    width: 100%;
+    height: auto; }

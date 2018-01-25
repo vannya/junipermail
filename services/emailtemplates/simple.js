@@ -1,6 +1,5 @@
 /*  
   Simple Text Survey
-  // Need to create...currently same as main.
 */
 const keys = require("../../config/keys");
 
