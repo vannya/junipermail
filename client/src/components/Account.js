@@ -3,14 +3,17 @@ import { connect } from "react-redux";
 import * as actions from "../actions";
 
 class Account extends Component {
-  state = {};
+  state = {
+    user: this.props.auth
+  };
 
-  componentDidMount() {
-    this.props.fetchUser();
+  async componentDidMount() {
+    await this.props.fetchUser();
+    this.setState({ user: this.props.auth});
   }
 
   renderAccountPage() {
-    switch (this.props.auth) {
+    switch (this.props.auth && this.state.user) {
       case null:
         return;
       case false:
@@ -23,11 +26,30 @@ class Account extends Component {
             <form
               onSubmit={e => this.handleSubmit(e)}
             >
+              <label>Full Name: </label>
               <input
                 type="text"
-                name="userName"
-                value={this.props.auth.name}
+                name="name"
+                value={this.state.user.name}
                 placeholder="Company or User Name"
+                required
+                onChange={(e) => this.handleChange(e)}
+              />
+              <label>Email: </label>
+              <input
+                type="text"
+                name="email"
+                value={this.state.user.email}
+                placeholder="Email"
+                required
+                onChange={(e) => this.handleChange(e)}
+              />
+              <label>Reply to Email: </label>
+              <input
+                type="text"
+                name="replyTo"
+                value={this.state.user.replyTo}
+                placeholder="Reply to Email"
                 onChange={(e) => this.handleChange(e)}
               />
               <button type="submit">Update Account</button>
@@ -38,13 +60,29 @@ class Account extends Component {
   }
 
   handleChange(e){
-    console.log(e.target.value);
+    const user = this.state.user;
+    const updatedUser = {
+      ...user,
+      [e.target.name]: e.target.value 
+    };
+    this.setState({
+      user: updatedUser
+    });
+    this.props.updateUser(updatedUser, updatedUser._id);
   }
 
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log("submitted");
+    const user = this.state.user;
+    const updatedUser = {
+      ...user,
+      [e.target.name]: e.target.value
+    };
+    this.setState({
+      user: updatedUser
+    });
+    this.props.updateUser(updatedUser, updatedUser._id);
   }
 
   render() {

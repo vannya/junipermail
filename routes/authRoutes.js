@@ -1,4 +1,7 @@
 const passport = require("passport");
+const mongoose = require('mongoose');
+require('../models/User');
+const User = mongoose.model("users");
 
 module.exports = app => {
   app.get(
@@ -33,6 +36,7 @@ module.exports = app => {
         user.googleId = req.body.googleId;
         user.name = req.body.name || user.name;
         user.email = req.body.email || user.email;
+        user.replyTo = req.body.replyTo || user.replyTo;
         user.credits = req.body.credits;
 
         user.save((err, user) => {
