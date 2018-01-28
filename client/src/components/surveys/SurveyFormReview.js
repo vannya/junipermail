@@ -6,7 +6,7 @@ import surveyTemplateList from "./surveyTemplateList";
 import { withRouter } from "react-router-dom";
 import * as actions from "../../actions";
 
-const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
+const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history, auth }) => {
   const reviewFields = _.map(formFields, ({ name, label }) => {
     return (
       <div key={name} className="survey-review-item">
@@ -28,13 +28,17 @@ const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
             })}
           </div>
         </div>
+        <div className="survey-review-item">
+          <label>Reply Email</label>
+          <div>{auth.replyTo}</div>
+        </div>
 
         <button className="cancelBtn btn-flat white-text" onClick={onCancel}>
           Back
         </button>
         <button
           className="btn btn-flat right white-text"
-          onClick={() => submitSurvey(formValues, history)}
+          onClick={() => submitSurvey(formValues, history, auth.replyTo)}
         >
           Send Survey <i className="material-icons right">email</i>
         </button>

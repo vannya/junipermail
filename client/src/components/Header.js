@@ -12,10 +12,8 @@ class Header extends Component {
         return;
       case false:
         return [
-          <li>
-            <h4 key="3" className="sidenav-title">
-              JuniperMail
-            </h4>
+          <li key="3">
+            <h4 className="sidenav-title">JuniperMail</h4>
           </li>,
           <SideNavItem key="1" href="/auth/google">
             Sign Up
@@ -36,18 +34,19 @@ class Header extends Component {
               key="4"
             />
           ) : (
-            <li>
-              <h4 key="4" className="sidenav-title">
-                JuniperMail
-              </h4>
+            <li key="4">
+              <h4 className="sidenav-title">JuniperMail</h4>
             </li>
           ),
           <SideNavItem key="1" className="side-nav-btn">
             <Payments />
           </SideNavItem>,
           <SideNavItem key="2">Credits: {this.props.auth.credits}</SideNavItem>,
+          <SideNavItem key="6" href="/myaccount">
+            Account
+          </SideNavItem>,
           <SideNavItem key="5" href="/surveys">
-            Dashboard
+            Surveys
           </SideNavItem>,
           <SideNavItem key="3" href="/api/logout">
             Logout
@@ -74,11 +73,30 @@ class Header extends Component {
           <li key="1">
             <Payments />
           </li>,
-          <li key="3" style={{ margin: "0 20px" }}>
-            Credits: {this.props.auth.credits}
-          </li>,
-          <li key="2">
-            <a href="/api/logout">Logout</a>
+          <li key="2" style={{ margin: "0 0 0 30px" }}>
+            <a
+              className="dropdown-button"
+              data-beloworigin="true"
+              data-activates="dropdown1"
+            >
+              Menu<i className="material-icons right">arrow_drop_down</i>
+            </a>
+
+            <ul id="dropdown1" className="dropdown-content">
+              <li className="dropdown-text">
+                Credits: {this.props.auth.credits}
+              </li>
+              <li>
+                <a href="/myaccount">Account</a>
+              </li>
+              <li>
+                <a href="/surveys">Surveys</a>
+              </li>
+              <li className="divider" />
+              <li key="2">
+                <a href="/api/logout">Logout</a>
+              </li>
+            </ul>
           </li>
         ];
     }
@@ -100,11 +118,11 @@ class Header extends Component {
           </ul>
           <SideNav
             trigger={
-              <a data-activates="mobile-demo" className="button-collapse">
+              <a data-activates="mobile-demo" className="right button-collapse">
                 <i className="material-icons">menu</i>
               </a>
             }
-            options={{ closeOnClick: true }}
+            options={{ closeOnClick: true, edge: "right" }}
           >
             {this.renderSideNav()}
           </SideNav>
