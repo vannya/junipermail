@@ -1,7 +1,6 @@
 export default [
-  { label: "Campaign Title", name: "title" },
-  { label: "Subject Line", name: "subject" },
-  { label: "Reply Email", name: "fromfield" },
-  { label: "Email Body", name: "body" },
-  { label: "Recipient List", name: "recipients" }
+  { label: "Campaign Title", name: "title", placeholder: "Campaign Title" },
+  { label: "Subject Line", name: "subject", placeholder: "Email Subject Line" },
+  { label: "Email Body", name: "body", placeholder: "Your question" },
+  { label: "Recipient List", name: "recipients", placeholder: "List of emails separated by commas" }
 ];

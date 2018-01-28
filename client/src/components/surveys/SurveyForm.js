@@ -13,7 +13,7 @@ class SurveyForm extends Component {
   state = {};
 
   renderFields() {
-    return _.map(formFields, ({ label, name }) => {
+    return _.map(formFields, ({ label, name, placeholder }) => {
       return (
         <Field
           key={name}
@@ -21,6 +21,7 @@ class SurveyForm extends Component {
           text="text"
           name={name}
           label={label}
+          placeholder={placeholder}
         />
       );
     });
@@ -41,6 +42,8 @@ class SurveyForm extends Component {
         <form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
           {this.renderFields()}
           {this.renderSelect()}
+          <p>Reply email: {this.props.auth.replyTo}</p>
+          <p>To change the reply email, <Link to="/myaccount">click here.</Link></p>
           <div>
             <Link to="/surveys" className="cancelBtn btn-flat left white-text">
               Cancel

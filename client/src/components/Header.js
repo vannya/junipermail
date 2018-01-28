@@ -46,8 +46,11 @@ class Header extends Component {
             <Payments />
           </SideNavItem>,
           <SideNavItem key="2">Credits: {this.props.auth.credits}</SideNavItem>,
+          <SideNavItem key="6" href="/myaccount">
+            Account
+          </SideNavItem>,
           <SideNavItem key="5" href="/surveys">
-            Dashboard
+            Surveys
           </SideNavItem>,
           <SideNavItem key="3" href="/api/logout">
             Logout
