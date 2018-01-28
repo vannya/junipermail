@@ -9,6 +9,8 @@ To do:
 2. Allow users to delete surveys.
 3. Complete user dashboard/account tab overhaul.
 4. Improved survey metrics.
+5. Create example images of survey types.
+6. Add to landing page (footer and example images).
 
 | Frontend Tech | Backend Tech |
 | ------ | ------ |
