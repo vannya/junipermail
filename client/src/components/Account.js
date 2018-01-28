@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Redirect } from 'react-router-dom';
 import * as actions from "../actions";
 
 class Account extends Component {
@@ -17,7 +18,7 @@ class Account extends Component {
       case null:
         return;
       case false:
-        return;
+        return <Redirect to="/" />;
       default:
         return (
           <div className="container page-view">

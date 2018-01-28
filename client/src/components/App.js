@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import * as actions from "../actions";
 import Header from "./Header";
 import Landing from "./Landing";
-import Dashboard from "./Dashboard";
+import SurveyData from "./surveys/SurveyData";
 import SurveyNew from "./surveys/SurveyNew";
 import ThankYou from "./ThankYou";
 import Account from "./Account";
@@ -21,7 +21,7 @@ class App extends Component {
           <div style={{ height: "100%", width: "100%" }}>
             <Header />
             <Route exact path="/" component={Landing} />
-            <Route exact path="/surveys" component={Dashboard} />
+            <Route exact path="/surveys" component={SurveyData} />
             <Route path="/surveys/new" component={SurveyNew} />
             <Route path="/surveys/:surveyId/:choice" component={ThankYou} />
             <Route path="/thankyou" component={ThankYou} />
