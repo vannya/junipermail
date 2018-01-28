@@ -6952,7 +6952,17 @@ nav {
   padding: 1em 0;
   text-align: center;
   border-bottom: 1px solid rgba(128, 128, 128, 0.4);
-  background-color: #00cc99; }
+  background-color: #9900cc; }
+
+.dropdown-text {
+  padding: 14px 16px; }
+
+.userView {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 150px;
+  background-color: #9900cc; }
 
 /* --- /Navigation --- */
 /* --- Buttons --- */
@@ -6961,6 +6971,12 @@ nav {
   .btn:hover, .btn-large:hover,
   .btn :focus, .btn-large :focus {
     background-color: #730099; }
+
+.clean-btn {
+  background-color: transparent;
+  border: none; }
+  .clean-btn:hover, .clean-btn :focus {
+    background-color: rgba(0, 0, 0, 0.1); }
 
 .cancelBtn {
   background-color: #00cc99; }
@@ -7097,13 +7113,6 @@ nav {
 
 /* --- /Survey Review Form --- */
 /* --- Dashboard --- */
-.userView {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 150px;
-  background-color: #00cc99; }
-
 .card-opt {
   background-color: #fff;
   border: 1px solid #9900cc; }
