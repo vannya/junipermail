@@ -12,8 +12,8 @@ class Header extends Component {
         return;
       case false:
         return [
-          <li>
-            <h4 key="3" className="sidenav-title">
+          <li key="3">
+            <h4 className="sidenav-title">
               JuniperMail
             </h4>
           </li>,
@@ -36,8 +36,8 @@ class Header extends Component {
               key="4"
             />
           ) : (
-            <li>
-              <h4 key="4" className="sidenav-title">
+            <li key="4">
+              <h4 className="sidenav-title">
                 JuniperMail
               </h4>
             </li>
@@ -46,8 +46,11 @@ class Header extends Component {
             <Payments />
           </SideNavItem>,
           <SideNavItem key="2">Credits: {this.props.auth.credits}</SideNavItem>,
+          <SideNavItem key="6" href="/myaccount">
+            Account
+          </SideNavItem>,
           <SideNavItem key="5" href="/surveys">
-            Dashboard
+            Surveys
           </SideNavItem>,
           <SideNavItem key="3" href="/api/logout">
             Logout
