@@ -7,6 +7,10 @@ class SurveyList extends Component {
     this.props.fetchSurveys();
   }
 
+  deleteSurvey(survey) {
+    console.log("deleted");
+  }
+
   renderSurveys() {
     return this.props.surveys.reverse().map(survey => {
       return (
