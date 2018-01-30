@@ -9,7 +9,6 @@ class SurveyList extends Component {
   }
 
   handleDelete(survey) {
-    console.log("delete");
     this.props.deleteSurvey(survey, survey._id);
   }
 

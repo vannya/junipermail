@@ -96,7 +96,7 @@ module.exports = app => {
     }
   });
 
-  app.put("/api/surveys/delete/:surveyId", (req, res) => {
+  app.put("/api/surveys/delete/:surveyId", requireLogin, (req, res) => {
     Survey.findById(req.params.surveyId, (err, survey) => {
       if(err){
         res.status(500).send(err);
