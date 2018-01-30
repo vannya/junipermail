@@ -24,7 +24,7 @@ class App extends Component {
             <Route exact path="/" component={Landing} />
             <Route exact path="/surveys" component={SurveyData} />
             <Route path="/surveys/new" component={SurveyNew} />
-            <Route path="/surveys/:surveyId/:choice" component={ThankYou} />
+            <Route exact path="/surveys/:surveyId/:choice" component={ThankYou} />
             <Route path="/thankyou" component={ThankYou} />
             <Route path="/myaccount" component={Account} />
             <Footer />

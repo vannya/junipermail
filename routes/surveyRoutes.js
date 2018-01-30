@@ -95,4 +95,21 @@ module.exports = app => {
       res.status(422).send(err);
     }
   });
+
+  app.put("/api/surveys/delete/:surveyId", requireLogin, (req, res) => {
+    Survey.findById(req.params.surveyId, (err, survey) => {
+      if(err){
+        res.status(500).send(err);
+      } else {
+        survey.delete = true;
+
+        survey.save((err, user) => {
+          if(err) {
+            res.status(500).send(err);
+          }
+          res.status(200).send(survey);
+        });
+      }
+    })
+  });
 };
