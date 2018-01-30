@@ -8,6 +8,7 @@ import SurveyData from "./surveys/SurveyData";
 import SurveyNew from "./surveys/SurveyNew";
 import ThankYou from "./ThankYou";
 import Account from "./Account";
+import Footer from "./Footer";
 
 class App extends Component {
   componentDidMount() {
@@ -26,6 +27,7 @@ class App extends Component {
             <Route path="/surveys/:surveyId/:choice" component={ThankYou} />
             <Route path="/thankyou" component={ThankYou} />
             <Route path="/myaccount" component={Account} />
+            <Footer />
           </div>
         </BrowserRouter>
       </div>

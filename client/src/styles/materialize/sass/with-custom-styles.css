@@ -6990,6 +6990,11 @@ nav {
   .addBtn > i :focus {
     background-color: #730099; }
 
+.bottom-btn {
+  position: absolute;
+  right: 0px;
+  bottom: 32px; }
+
 @media screen and (max-width: 600px) {
   .btn-large {
     padding: 0 12px; } }
@@ -6998,13 +7003,18 @@ nav {
 /* --- Landing Page --- */
 .landing {
   position: relative;
+  height: 100%;
+  width: 100%; }
+
+.landing-image {
+  position: relative;
   height: 60%;
   width: 100%;
   background: url(../../assets/landing.jpg) no-repeat top right;
   background-size: cover;
   text-align: center; }
   @media screen and (max-width: 800px) and (orientation: landscape) {
-    .landing {
+    .landing-image {
       height: 100%; } }
 
 .overlay {
@@ -7136,9 +7146,27 @@ nav {
   align-self: center; }
 
 /* --- /Dashboard --- */
+/* --- Thank You Page --- */
 .thankyou {
   margin: 0 auto;
   width: 100%; }
   .thankyou img {
     width: 100%;
     height: auto; }
+
+/* --- /Thank You Page --- */
+/* --- Footer --- */
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 100%;
+  border-top: 1px solid lightgray;
+  background-color: #FFF;
+  z-index: 1; }
+
+/* --- /Footer --- */

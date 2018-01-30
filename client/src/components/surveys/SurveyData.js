@@ -16,7 +16,7 @@ class SurveyData extends Component {
             <h3 className="page-title">Surveys</h3>
             <SurveyList />
             <div className="fixed-action-btn">
-              <Link to="/surveys/new" className="btn-floating btn-large addBtn">
+              <Link to="/surveys/new" className="btn-floating btn-large addBtn bottom-btn">
                 <i className="material-icons">add</i>
               </Link>
             </div>
