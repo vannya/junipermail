@@ -6,10 +6,9 @@
 
 To do:  
 1. Docs for getting your own set of keys for development.
-2. Allow users to delete surveys.
-3. Improved survey metrics.
-4. Create example images of survey types.
-5. Add example images to landing page.
+2. Improved survey metrics.
+3. Create example images of survey types.
+4. Add example images to landing page.
 
 | Frontend Tech | Backend Tech |
 | ------ | ------ |
